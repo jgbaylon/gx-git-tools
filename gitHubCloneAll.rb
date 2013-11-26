@@ -8,6 +8,7 @@ require 'json'
 2. Copy the token field generated
 3. Go to your Account Settings > Applications > Personal Access Tokens and modify description with the token
 4. modify GITHUB_* environment variables from setEnv.sh; then run
+   source .setEnv.sh
    ./setEnv.sh
 5. To run
    ruby gitHubCloneAll.rb
