@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export GITHUB_USERNAME=
+export GITHUB_ORGANIZATION=
+export GITHUB_LOCAL_PATH=
+export GITHUB_ACCESS_TOKEN=
