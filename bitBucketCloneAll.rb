@@ -12,7 +12,7 @@ A. SHORT ROUTE (Recommended)
 3. To run
    ruby bitBucketCloneAll.rb
 
-B. LONG ROUTE
+B. LONG ROUTE (For Troubleshooting)
 1. Manage account > Integrated applications > Add consumer. Take note of Key and Secret.
 2. Request token using the OAuth Test Client: http://term.ie/oauth/example/client.php
    a. endpoint: https://bitbucket.org/api/1.0/oauth/request_token?oauth_callback=http%3A%2F%2Flocalhost
@@ -35,6 +35,7 @@ B. LONG ROUTE
    source setEnv.sh
    ./setEnv.sh
 6. sudo gem install oauth
+   sudo gem install json
 7. To run
    ruby bitBucketCloneAll.rb
 =end
