@@ -10,7 +10,8 @@ require 'json'
 4. Modify GITHUB_* environment variables from setEnv.sh; then run
    source setEnv.sh
    ./setEnv.sh
-5. To run
+5. Do a sudo gem install on all required gems if not available
+6. To run
    ruby gitHubCloneAll.rb
 =end
 

@@ -34,8 +34,7 @@ B. LONG ROUTE (For Troubleshooting)
 5. Modify BITBUCKET_* environment variables from setEnv.sh; then run
    source setEnv.sh
    ./setEnv.sh
-6. sudo gem install oauth
-   sudo gem install json
+6. Do a sudo gem install on all required gems if not available
 7. To run
    ruby bitBucketCloneAll.rb
 =end

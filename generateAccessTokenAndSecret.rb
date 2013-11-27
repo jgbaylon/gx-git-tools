@@ -7,7 +7,7 @@ require 'yaml'
 2. Modify BITBUCKET_CONSUMER_KEY and BITBUCKET_CONSUMER_SECRET environment variables from setEnv.sh; then run
    source setEnv.sh
    ./setEnv.sh
-3. sudo gem install oauth
+3. Do a sudo gem install on all required gems if not available
 4. To run
    a. ruby generateAccessTokenAndSecret.rb
    b. open auth.yaml and take note of oauth_token and oauth_token_secret
