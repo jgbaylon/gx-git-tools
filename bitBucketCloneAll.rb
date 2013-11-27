@@ -4,6 +4,15 @@ require 'oauth'
 require 'json'
 
 =begin
+A. SHORT ROUTE (Recommended)
+1. Open and follow instructions on generateAccessTokenAndSecret.rb
+2. Modify BITBUCKET_* environment variables from setEnv.sh; then run
+   source setEnv.sh
+   ./setEnv.sh
+3. To run
+   ruby bitBucketCloneAll.rb
+
+B. LONG ROUTE
 1. Manage account > Integrated applications > Add consumer. Take note of Key and Secret.
 2. Request token using the OAuth Test Client: http://term.ie/oauth/example/client.php
    a. endpoint: https://bitbucket.org/api/1.0/oauth/request_token?oauth_callback=http%3A%2F%2Flocalhost
