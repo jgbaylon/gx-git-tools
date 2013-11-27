@@ -7,7 +7,7 @@ require 'json'
    curl https://api.github.com/authorizations --user <username> --data '{"scopes":["repo"]}'
 2. Copy the token field generated
 3. Go to your Account Settings > Applications > Personal Access Tokens and modify description with the token
-4. modify GITHUB_* environment variables from setEnv.sh; then run
+4. Modify GITHUB_* environment variables from setEnv.sh; then run
    source .setEnv.sh
    ./setEnv.sh
 5. To run
