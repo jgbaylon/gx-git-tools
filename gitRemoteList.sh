@@ -1,5 +1,5 @@
 #!/bin/bash
-BASE_DIR=$1
+BASE_DIR=~/Artifactory
 FILES=$BASE_DIR/*
 
 cd $BASE_DIR

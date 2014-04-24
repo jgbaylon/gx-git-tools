@@ -1,5 +1,5 @@
 #!/bin/bash
-BASE_DIR=~/Projects
+BASE_DIR=~/Artifactory
 FILES=$BASE_DIR/*
 
 cd $BASE_DIR
@@ -9,7 +9,7 @@ do
   if [ -d $f ]; then
     echo "Processing $f file..."
     cd $f
-    git checkout jenkins
+    git fetch upstream
     cd $BASE_DIR
   fi
 done

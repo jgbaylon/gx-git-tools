@@ -9,7 +9,7 @@ do
   if [ -d $f ]; then
     echo "Processing $f file..."
     cd $f
-    git checkout jenkins
+    git status
     cd $BASE_DIR
   fi
 done

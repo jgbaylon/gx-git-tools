@@ -1,5 +1,5 @@
 #!/bin/bash
-BASE_DIR=$1
+BASE_DIR=~/Projects
 FILES=$BASE_DIR/*
 
 cd $BASE_DIR

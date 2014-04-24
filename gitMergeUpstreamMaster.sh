@@ -14,8 +14,8 @@ do
     echo "Processing $f file..."
     cd $f
     dir=`echo $f | rev | cut -d\/ -f1 | rev`
-    if [ $dir == "kafka-gx-0.8" ]; then
-      git merge upstream/gx-0.8
+    if [ $dir == "kafka" ]; then
+      git merge upstream/trunk
     else
       git merge upstream/master
     fi

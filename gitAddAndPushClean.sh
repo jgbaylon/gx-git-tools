@@ -1,6 +1,13 @@
 #!/bin/bash
-BASE_DIR=~/Projects
+
+MSG=$1
+
+BASE_DIR=~/Artifactory
 FILES=$BASE_DIR/*
+
+echo "===== START GIT ADD AND COMMIT ====="
+./gitAddAndCommit.sh $MSG
+echo "===== START GIT ADD AND COMMIT ====="
 
 cd $BASE_DIR
 
@@ -10,14 +17,14 @@ do
     echo "Processing $f file..."
     cd $f
 
-    flagPush='  (use "git push" to publish your local commits)'
+    flagPush='#   (use "git push" to publish your local commits)'
     msgPush=`git status | grep "$flagPush"`
     flagClean='nothing to commit, working directory clean'
     msgClean=`git status | grep "$flagClean"`
 
     if [[ $flagPush == $msgPush && $flagClean == $msgClean ]]; then
       echo "About to push..."
-      git push origin jenkins
+      git push
     fi
     cd $BASE_DIR
   fi

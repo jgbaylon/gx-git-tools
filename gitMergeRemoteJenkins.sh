@@ -14,8 +14,8 @@ do
     echo "Processing $f file..."
     cd $f
     dir=`echo $f | rev | cut -d\/ -f1 | rev`
-    if [ $dir == "kafka-gx-0.8" ]; then
-      git pull git@github.com:jgbaylon/kafka.git gx-0.8
+    if [ $dir == "kafka-trunk" ]; then
+      git pull git@github.com:jgbaylon/kafka.git trunk
     else
       git pull git@github.com:jgbaylon/$dir.git
     fi
