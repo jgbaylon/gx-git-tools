@@ -15,7 +15,7 @@ do
     flagClean='nothing to commit, working directory clean'
     msgClean=`git status | grep "$flagClean"`
 
-    if [[ $flagPush == $msgPush && $flagClean == $msgClean ]]; then
+    if [[ $flagPush == $msgPush || $flagClean == $msgClean ]]; then
       echo "About to push..."
       git push origin jenkins
     fi
