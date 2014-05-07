@@ -1,7 +1,9 @@
 #!/bin/bash
 BASE_DIR=~/Projects
-OLD_FILES=$BASE_DIR/gx-*
-NEW_FILES=$BASE_DIR/new-gx-*
+GX_FILES=$BASE_DIR/gx-*
+NEW_GX_FILES=$BASE_DIR/new-gx-*
+LWES_FILES=$BASE_DIR/lwes-*
+KAFKA_FILES=$BASE_DIR/kafka-*
 
 echo "===== START GIT CHECKOUT JENKINS ====="
 ./gitCheckoutJenkins.sh
@@ -9,7 +11,7 @@ echo "===== END GIT CHECKOUT JENKINS ====="
 
 cd $BASE_DIR
 
-for f in $OLD_FILES
+for f in $GX_FILES
 do
   if [ -d $f ]; then
     echo "Processing $f file..."
@@ -24,7 +26,31 @@ do
   fi
 done
 
-for f in $NEW_FILES
+for f in $LWES_FILES
+do
+  if [ -d $f ]; then
+    echo "Processing $f file..."
+    cd $f
+    dir=`echo $f | rev | cut -d\/ -f1 | rev`
+    git pull git@github.com:jgbaylon/$dir.git
+    cd $BASE_DIR
+  fi
+done
+
+for f in $KAFKA_FILES
+do
+  if [ -d $f ]; then
+    echo "Processing $f file..."
+    cd $f
+    dir=`echo $f | rev | cut -d\/ -f1 | rev`
+    if [ $dir == "kafka-trunk" ]; then
+      git pull git@github.com:jgbaylon/kafka.git trunk
+    fi
+    cd $BASE_DIR
+  fi
+done
+
+for f in $NEW_GX_FILES
 do
   if [ -d $f ]; then
     echo "Processing $f file..."
